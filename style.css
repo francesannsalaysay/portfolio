@@ -1,0 +1,55 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Abel', sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+#header {
+	position: fixed;
+}
+
+.nav-link span.hide {
+	display: none;
+}
+
+.nav-link:hover span.hide {
+	display: inline-block;
+}
+
+.navbar ul li {
+	list-style-type: none;
+}
+
+.material-icons {
+	color: white;
+}
+
+.hide {
+	color: white;
+}
+
+.bgimage1 {
+	background: url(images/pic2.jpg);
+	height: 60vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.list-indent li {
+	margin-left: 15px;
+}
+
+.bg-green {
+	background-color: #729172;
+}
+
+.social-icons li {
+	list-style-type: none;
+	padding: 10px;
+}
