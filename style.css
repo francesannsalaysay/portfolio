@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -5,12 +9,16 @@
 	font-family: 'Abel', sans-serif;
 }
 
-body {
-    scroll-behavior: smooth;
-}
-
 #header {
 	position: fixed;
+	z-index: 9999;
+}
+.nav-link {
+	padding: .5rem 0;
+}
+.nav-link span {
+	vertical-align: middle;
+	font-weight: 600;
 }
 
 .nav-link span.hide {
@@ -19,14 +27,25 @@ body {
 
 .nav-link:hover span.hide {
 	display: inline-block;
+	color: black;
 }
-
 .navbar ul li {
 	list-style-type: none;
+}
+.navbar-black .navbar-toggler {
+	background-color: rgba(255, 255, 255, 0.5);
+	color: black;
+	border-color: black;
+	flex-basis: auto;
+	padding: .25rem;
+}
+.navbar-collapse {
+	flex-basis: auto;
 }
 
 .material-icons {
 	color: white;
+	background-color: black;
 }
 
 .hide {
@@ -41,6 +60,22 @@ body {
 	background-position: right center;
 }
 
+.bgimage1:before {
+	content: "";
+	background: rgba(255, 255, 255, 0.35);
+	height: 60vh;
+	width: 100%;
+	position: absolute;
+}
+
+.bgimage1 h1, .bgimage1 p {
+	text-shadow: 1px 1px 1px black;
+}
+
+hr.border5px {
+	border-top: 5px solid #cccccc;
+}
+
 .list-indent li {
 	margin-left: 15px;
 }
@@ -52,4 +87,49 @@ body {
 .social-icons li {
 	list-style-type: none;
 	padding: 10px;
+}
+
+.social-icons li a {
+	color: white;
+}
+
+.cus-height {
+	height: 400px;
+	object-fit: cover;
+}
+
+.personal-details {
+	list-style: none;
+}
+
+.btn-black {
+	background-color: black;
+	color: white;
+	border: 1px solid black;
+}
+
+.btn-black:hover {
+	background-color: white;
+	color: black;
+
+}
+
+@media (max-width: 768px) {
+	.cus-height {
+		height: 250px;
+	}
+}
+
+@media (max-width: 480px) {
+	#header {
+		background-color: rgba(255,255,255,0.4);
+    	width: 100%;
+	}
+	.bgimage1 {
+		background-position: 40% center;
+	}
+	.nav-link:hover span.hide {
+		display: block;
+		color: black;
+	}
 }
